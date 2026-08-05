@@ -1,11 +1,8 @@
-cat << 'EOF' > .gitignore
-# Saari files ignore karo
+cat << 'EOF' > .gitignore 
 *
-
-# Folders ko ignore mat karo (structure maintain rakhne ke liye)
+ 
 !*/
-
-# Configuration files ko ignore mat karo
+ 
 !.gitignore
 !.gitkeep
 EOF
