@@ -6,3 +6,6 @@ cat << 'EOF' > .gitignore
 !.gitignore
 !.gitkeep
 EOF
+
+media/*
+!media/.gitkeep
