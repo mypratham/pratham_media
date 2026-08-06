@@ -1,11 +1,16 @@
-cat << 'EOF' > .gitignore 
-*
- 
-!*/
- 
-!.gitignore
-!.gitkeep
-EOF
+# Virtual env
+venv/
 
-media/*
-!media/.gitkeep
+# Python
+__pycache__/
+*.pyc
+
+# Django
+db.sqlite3
+.env
+
+# Ignore all media files
+media/**
+
+# Keep media folder
+!media/.gitkeep.DS_Store
