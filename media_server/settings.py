@@ -126,3 +126,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = "/Users/lappygarage/Desktop/MediaServer/media"
 MEDIA_URL = "/media/"
+
+CORS_ALLOW_ALL_ORIGINS = False  # Ise False kar dein
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:3005",
+    "https://mypratham.com",
+    "https://media.mypratham.com",      # Apne main frontend domain ko bhi yahan add kar dein
+]
+
+# CORS_ALLOW_HEADERS = list(default_headers) + [
+#     "x-api-key",
+#     "x-api-secret",
+# ]
+CORS_ALLOW_CREDENTIALS = True
+
+# Baki settings jo aapne add ki hain (Perfect hain)
+CSRF_TRUSTED_ORIGINS = [
+    "https://api2.mypratham.com",
+    "https://api.mypratham.com",
+]
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
