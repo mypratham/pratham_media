@@ -157,3 +157,10 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
+
+ALLOWED_HOSTS = [
+    "media.mypratham.com",
+    "www.media.mypratham.com",
+    "127.0.0.1",
+    "localhost",
+]
