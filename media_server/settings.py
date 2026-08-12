@@ -124,9 +124,16 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = "/Users/lappygarage/Desktop/MediaServer/media"
+import os
+from dotenv import load_dotenv
 
-MEDIA_URL = "/media/"
+load_dotenv()
+
+MEDIA_ROOT = os.getenv("MEDIA_ROOT","")
+
+MEDIA_BASE_URL = os.getenv("MEDIA_BASE_URL","")
+
+# MEDIA_URL = "/media/"
 
 CORS_ALLOW_ALL_ORIGINS = False  # Ise False kar dein
 

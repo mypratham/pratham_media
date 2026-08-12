@@ -1,12 +1,24 @@
-
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+
+from media_api.views import serve_media
+
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("api/media/", include("media_api.urls")),
-]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path(
+        "admin/",
+        admin.site.urls
+    ),
+
+    path(
+        "api/media/",
+        include("media_api.urls")
+    ),
+
+    path(
+        "media/<path:path>",
+        serve_media,
+        name="serve_media"
+    ),
+]
