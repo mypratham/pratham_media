@@ -164,3 +164,5 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
 ]
+
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024
