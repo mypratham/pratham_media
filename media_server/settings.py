@@ -156,6 +156,7 @@ CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     "https://api2.mypratham.com",
     "https://api.mypratham.com",
+    "https://media.mypratham.com",
 ]
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
